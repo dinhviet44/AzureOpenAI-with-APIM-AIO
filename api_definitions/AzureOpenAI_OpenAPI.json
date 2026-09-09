@@ -7,10 +7,10 @@
   },
   "servers": [
     {
-      "url": "https://example.openai.azure.com/openai",
+      "url": "https://demodeployment-aoai-apim.openai.azure.com/openai",
       "variables": {
         "endpoint": {
-          "default": "example.openai.azure.com"
+          "default": "demodeployment-aoai-apim.openai.azure.com"
         }
       }
     }
@@ -26,20 +26,11 @@
     }
   ],
   "paths": {
-    "/deployments/{deployment-id}/chat/completions": {
+    "/responses": {
       "post": {
         "summary": "Creates a completion for the chat message",
         "operationId": "ChatCompletions_Create",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "deployment-id",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "description": "Deployment id of the model which was deployed."
-            }
-          },
+        "parameters":
           {
             "in": "query",
             "name": "api-version",
@@ -49,8 +40,7 @@
               "example": "2023-03-15-preview",
               "description": "api version"
             }
-          }
-        ],
+          },
         "requestBody": {
           "required": true,
           "content": {
@@ -178,7 +168,7 @@
                 ]
               },
               "example": {
-                "model": "gpt-35-turbo",
+                "model": "gpt-5-mini",
                 "messages": [
                   {
                     "role": "user",

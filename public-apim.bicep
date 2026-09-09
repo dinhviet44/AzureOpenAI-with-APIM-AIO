@@ -11,16 +11,16 @@ param location string = resourceGroup().location
 param apiManagementSku string = 'Developer'
 
 @description('The name of the API publisher. This information is used by API Management.')
-param apiManagementPublisherName string = 'Contoso'
+param apiManagementPublisherName string = 'Nick'
 
 @description('The email address of the API publisher. This information is used by API Management.')
-param apiManagementPublisherEmail string = 'admin@contoso.com'
+param apiManagementPublisherEmail string = '1@1.1'
 
 @description('Provide the Name of the Azure Open AI service.')
-param apiServiceNamePrimary string = 'Insert_Your_Azure_OpenAi_Name_Here'
+param apiServiceNamePrimary string = 'demodeployment-aoai-apim'
 
 @description('Provide the Resource Group Name of the Azure Open AI service.')
-param apiServiceRgPrimary string = 'Insert_Resource_Group_Name_Here'
+param apiServiceRgPrimary string = 'aoai-apim'
 
 @description('If you want to provide resiliency when single region exceeds quota, then select Multi and provide URL to an additional Azure OpenAI endpoint. Otherwise, maintain default entry of Single and only provide one Azure OpenAI endpoint.')
 @allowed([
